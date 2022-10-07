@@ -78,9 +78,17 @@
 	<!-- ======= Hero Section ======= -->
 	<section id="hero" class="d-flex flex-column justify-content-center">
 		<div class="container" data-aos="fade-right" data-aos-delay="0">
-			<h1>Devang Haresh Liya</h1>
-			<p>I'm <span class="typed" data-typed-items="an Astrophysicist, a Science communicator, an iGEM 2018 alumni, a vexillology enthusiast"></span></p>
-			<p style="font-size: 14pt; color: #000; padding-right: 8%;">I am interested in using multi-wavelength observations and novel statistical techniques to study the connection between dark matter halos and galaxy formation.</p>
+		<div class="row">
+			<div class="col-lg-2">
+				<img src="assets/img/devang.png" class="img-fluid" alt="devang">
+			</div>
+			<div class="col-lg-10">
+				<h1>Devang Haresh Liya</h1>
+				<p>I'm <span class="typed" data-typed-items="an Astrophysicist, a Science communicator, a vexillology enthusiast"></span></p>
+				<p style="font-size: 14pt; color: #000; padding-right: 8%;">I study the cosmic evolution of growing supermassive black holes using the JWST and other multi-wavelength surveys. I employ advanced Bayesian techniques and machine learning techniques to study the properties of these objects.</p>
+			</div>
+		</div>
+		<div class="row">
 			<nav id="navbar" class="navbar">
 				<ul>
 				  <li><a class="nav-link active" href="index.html">Home</a></li>
@@ -99,6 +107,7 @@
 				<a href="https://scholar.google.com/citations?user=yw6duScAAAAJ" class="google scholar"><i class="ai ai-google-scholar-square"></i></a>
 				<a href="https://www.researchgate.net/profile/Devang_Liya" class="Researchgate"><i class="ai ai-researchgate"></i></a>
 			</div>
+		</div>
 		</div>
 	</section><!-- End Hero -->
 
@@ -158,22 +167,22 @@
 				</div>
 
 				<div class="row">
-					<div class="col-lg-4">
-						<img src="assets/img/k_randomwalks.gif" class="img-fluid" alt="Change in initial density field with smoothing scale">
-						<p style="font-size:14px">Change in initial density field with smoothing scale<br>Credit: Devang Liya</p>
+					<div class="col-lg-5">
+						<img src="assets/img/excursion_set.png" class="img-fluid" alt="Change in initial density field with smoothing scale">
+						<p style="font-size:14px">Cartoon of excursion set approach for collapse of dark matter halos<br>Credit: Devang Liya and <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xkcd.html">XKCD in matplotlib</a></p>
 					</div>
-					<div class="col-lg-8 pt-4 pt-lg-0 content">
-						<h3>Effect of the tidal fields in the formation of the dark matter halos</h3>
+					<div class="col-lg-7 pt-4 pt-lg-0 content">
+						<h3>Mass Function of Collapsed Halos and the Excursion Set</h3>
 <!-- 						<p class="fst-italic">
 							<strong>Supervisors:</strong> , IISER-Mohali; , IUCAA, Pune; , NISER, Bhubaneswar.
 						</p> -->
 						<p style="text-align: justify;">
-							Observed mass distribution of the dark matter halos in the universe — known as halo mass function — shows significant departures from theoretical predictions. It could be possible to explain this discrepancy by considering the effects of the large scale tidal field when the dark matter halos are formed. In my master's thesis, we are studying such influences in a variety of ways to quantify the effect of the shape of the power spectrum on the mass function. We plan to compare our results with simulations. <a href="https://web.iisermohali.ac.in/Faculty/jasjeet/">Prof. Jasjeet Singh Bagla</a>, <a href="https://www.researchgate.net/scientific-contributions/Aseem-Paranjape-59288956">Dr. Aseem Paranjape</a>, and <a href="http://www.linkedin.com/pub/nishikanta-khandai/35/622/b66">Dr. Nishikanta Khandai</a> are my supervisors for this project.
+							Observed mass distribution of the dark matter halos in the universe — known as halo mass function — shows significant departures from theoretical predictions. Modelling the halo collapse as a stochastic problem could help us explain the observed departures. This approach is called excursion set approach. In my master's thesis, I have reviewed the properties of the dark matter halos, methods to study them, and methods to predict the form of the halo mass function. I have also developed a set of programs for simulating the excursion set formalism with arbitrary absorbing barrier and an arbitrary matter power spectrum. <a href="https://web.iisermohali.ac.in/Faculty/jasjeet/">Prof. Jasjeet Singh Bagla</a> was my supervisors for this project.
 						</p>
 						<div class="row">
 							<div class="col-lg-12">
 								<ul>
-									<li><i class="bi bi-chevron-right"></i> <strong>Key conecepts:</strong><span>Halo model, Excursion set theory, cosmological N-body simulations</span></li>
+									<li><i class="bi bi-chevron-right"></i> <strong>Key conecepts:</strong><span>Halo model, Excursion set theory</span></li>
 									<li><i class="bi bi-chevron-right"></i> <strong>Computational tools:</strong><span>Python</span></li>
 								</ul>
 							</div>
@@ -232,7 +241,7 @@
 						<p style="font-size:14px">Credit: <a href="https://in.linkedin.com/in/sveekruth-pai-ba675727">Sveekruth Pai</a>, IISER-Mohali iGEM'18</p>
 					</div>
 					<div class="col-lg-7 pt-4 pt-lg-0 content">
-						<h3>FearOmone</h3>
+						<h3>FearoMone</h3>
 						<p style="text-align: justify;">
 							Nearly 40% of India's foodgrain production is lost during the post-harvest phase. Rats and mice are one of the major causes of this loss. Inspired by the natural prey-predator relationship between rats and cats, we developed a bio-synthetic deterrent by using genetically engineered yeast to produce cat pheromones. We also developed variety of hardwares and softwares to safely deploy the product. We presented this work at the Giant Jamboree held in Boston, USA and were awarded a <a href="https://2018.igem.org/Competition/Results">bronze medal</a> along with a nomination for the best food and nutrition project. Visit the <a href="http://2018.igem.org/Team:IISER-Mohali">project website</a> to learn more!
 						</p>
@@ -282,14 +291,15 @@
 						<!-- <i class="fas fa-compact-disc fa-lg" style="color:#0563bb"></i>   -->
 						<h3>Published articles</h3>
 						<p>
-							<li>Anand N.M., <strong>Liya D.H.</strong>, Pradhan A.K., Tayal N., Bansal A., et al. (2021) A comprehensive SARS-CoV-2 genomic analysis identifies potential targets for drug repurposing. <em>PLOS ONE</em> 16(3): e0248553. <a href="https://doi.org/10.1371/journal.pone.0248553">https://doi.org/10.1371/journal.pone.0248553</a></li>
-							<li><strong>Devang Haresh Liya</strong>, Mirudula Elanchezhian, Mukulika Pahari, Nithishwer Mouroug Anand, Shivani Suresh, Nivedha Balaji, Ashwin Kumar Jainarayanan et al. (2021) QPromoters: Sequence based prediction of promoter strength in Saccharomyces cerevisiae. <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2021.04.27.441621">https://doi.org/10.1101/2021.04.27.441621</a></li>
-							<li>Beal, J., Farny, N.G., Haddock-Angelli, T. ,Selvarajah, V. , Baldwin, G. S., Buckley-Taylor, R., Gershater M., Kiga, D., Marken, J., Sanchania, V., Sison A., Workman C. T. &amp; <strong>iGEM Interlab Study Contributors</strong> et al. (2020) Robust estimation of bacterial cell count from optical density. <em>Commun Biol</em> 3, 512. <a href="https://doi.org/10.1038/s42003-020-01127-5">https://doi.org/10.1038/s42003-020-01127-5</a></li>
+							<li><strong>Liya, D. H.</strong>, Anand, N. M., Jainarayanan, A. K., Elanchezhian, M., Seetharaman, M., Balakannan, D., & Pradhan, A. K. (2022). Drug repurposing and sequence analysis in S-glycoprotein variants reveals critical signature patterns and destabilization of receptor-binding domain in omicron variant. <em>Journal of Biomolecular Structure and Dynamics</em>, 1-18. <a href="https://doi.org/10.1080/07391102.2022.2127902">doi:10.1080/07391102.2022.2127902</a></li>
+							<li>Anand N.M., <strong>Liya D.H.</strong>, Pradhan A.K., Tayal N., Bansal A., <em>et al.</em> (2021) A comprehensive SARS-CoV-2 genomic analysis identifies potential targets for drug repurposing. <em>PLOS ONE</em> 16(3): e0248553. <a href="https://doi.org/10.1371/journal.pone.0248553">doi:10.1371/journal.pone.0248553</a></li>
+							<li><strong>Devang Haresh Liya</strong>, Mirudula Elanchezhian, Mukulika Pahari, Nithishwer Mouroug Anand, Shivani Suresh, Nivedha Balaji, Ashwin Kumar Jainarayanan <em>et al.</em> (2021) QPromoters: Sequence based prediction of promoter strength in Saccharomyces cerevisiae. <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2021.04.27.441621">doi:10.1101/2021.04.27.441621</a></li>
+							<li>Beal, J., Farny, N.G., Haddock-Angelli, T. ,Selvarajah, V. , Baldwin, G. S., Buckley-Taylor, R., Gershater M., Kiga, D., Marken, J., Sanchania, V., Sison A., Workman C. T. &amp; <strong>iGEM Interlab Study Contributors</strong> <em>et al.</em> (2020) Robust estimation of bacterial cell count from optical density. <em>Commun Biol</em> 3, 512. <a href="https://doi.org/10.1038/s42003-020-01127-5">doi:10.1038/s42003-020-01127-5</a></li>
 						</p>
 						<h3>In preparation</h3>
 						<p>
-							<li><strong>Liya D.H.</strong>, Alam S., Paranjape A.: Impact of Galaxy physics on precision Cosmology from non-linear scales.</li>
-							<li></li>
+							<li><strong>Liya, D.H.</strong>, Alam, S., Paranjape, A.: Impact of Galaxy physics on precision Cosmology from non-linear scales.</li>
+							<li><strong>Liya, D.H.</strong>, Boorman, P., Beri, A.: TBD</li>
 						</p>
 
 						<h3>Outreach activities</h3>
@@ -321,6 +331,12 @@
 		  <div class="col-lg-6">
 			<h3 class="resume-title">Education</h3>
 			<div class="resume-item">
+			  <h4>PhD in Astrophysics</h4>
+			  <h5>2022 - 2026 (expected)</h5>
+			  <p><em><a href="https://www.ncl.ac.uk/">Newcastle University, Newcastle upon Tyne, UK</a></em></p>
+			  <p>My research is related to the cosmic evolution of near-nuclear dust in Active Galactic Nuclei (AGN), which are growing supermassive black holes (SMBHs), using JWST and other multi-wavelength surveys. I am also training in data sciences as part of the <a href="https://research.northumbria.ac.uk/nudata/">NUdata CDT</a> program.</p>
+			</div>
+			<div class="resume-item">
 			  <h4>Integrated Masters in Physics</h4>
 			  <h5>2017 - 2022</h5>
 			  <p><em><a href="https://www.iisermohali.ac.in/">Indian Institute of Science Education and Research, Mohali, India</a></em></p>
@@ -332,18 +348,18 @@
 			  <p><em><a href="https://vesit.ves.ac.in/">Vivekanand Education Society's Institute Of Technology, Mumbai, India</a></em></p>
 			  <p>Completed two semesters of coursework in the <a href="https://vesit.ves.ac.in/departments/cmpn/hod_desk">Department of Computer Engineering</a> at VESIT. Dropped out to pursue research in natural sciences.</p>
 			</div>
-			<div class="resume-item">
+<!-- 			<div class="resume-item">
 			  <h4>Higher Secondary School Certificate</h4>
 			  <h5>2014 - 2016</h5>
 			  <p><em>Hill Spring International Jr. College, Mumbai, India</em></p>
 			  <p>Graduated with 89.8% and was in top 1 percentile in Maharashtra State Board of Secondary and Higher Secondary Education.</p>
-			</div>
+			</div> -->
 		  </div>
 		  <div class="col-lg-6">
 			<h3 class="resume-title">Coursework</h3>
 			  <ul>
 				<li><strong>Physics:</strong> Classical mechanics, Electrodynamics, Advanced quantum mechanics, Thermodynamics and statistical mechanics, Solid state physics, Nuclear and particle physics.</li>
-				<li><strong>Astronomy:</strong> Astronomy &amp; Astrophysics, Astrophysical processes and stars, High energy astrophysics, Physics of fluids</li>
+				<li><strong>Astronomy:</strong> Astronomy &amp; Astrophysics, Astrophysical processes and stars, Galaxies and Cosmology, High energy astrophysics, Physics of fluids</li>
 				<li><strong>Mathematics:</strong> Group theory &amp; linear algebra, Probability &amp; statistics, Curves &amp; surfaces, Mathematical methods for physicists, Computational methods for physicists</li>
 				<li><strong>Others:</strong> Network science, Modelling complex systems, Climate change &amp; sustainable development, Philosophy of science, Principles of economics</li>
 			  </ul>
@@ -355,14 +371,15 @@
 				<li><strong>Known softwares:</strong> Xspec/PyXspec, FTOOLS, CASA, DS9, Proteus, LTSpice</li>
 				<li><strong>Others:</strong> Linux OS, MPI, git, MySQL, HTML/CSS, LaTeX, Photoshop/Illustrator, Office softwares</li>
 			  </ul>
-			  <p><i class="fas fa-file"></i> Download full CV <a href="assets/pdfs/CV.pdf">here</a>.</p>
+			  <p><i class="fas fa-file"></i> Download full CV in pdf format <a href="assets/pdfs/CV.pdf">here</a>.</p>
 		  </div>
 		</div>
 		<div class="row">
 			<div class="col-lg-12">
 				<h3 class="resume-title">Awards and Scholarships</h3>
 			  <ul>
-			  	<li><a href="https://online-inspire.gov.in/">Innovation in Science Pursuit for Inspired Research (INSPIRE) Fellowship</a> <strong>(2017 - present)</strong></li>
+			  	<li><a href="https://research.northumbria.ac.uk/nudata/">NUdata studentship</a> awarded by the Science and Technology Facilities Council, UKRI </a> <strong>(2022 - Present)</strong></li>
+			  	<li><a href="https://online-inspire.gov.in/">INSPIRE fellowship</a> awarded by the Department of Science and Technology, GoI <strong>(2017 - 2022)</strong></li>
 				<li>Won Bronze medal and nomination for the best food and nutrition project at iGEM, <strong>(2018)</strong></li>
 				<li>Won the Sky Watch Array Network (SWAN) Imaging challenge, <strong>(2018)</strong></li>
 				<li>Won the hackathon and the quiz at the North India Astronomy Meet, IIT-Mandi, <strong>(2018, 2019)</strong></li>
@@ -381,7 +398,7 @@
 				<li>Sky Watch Array Network (SWAN) Hands-on workshop, Gauribidanur Radio Observatory, Bangalore, India <strong>(2019)</strong></li>
 				<li>Modeling Synthetic Biology Systems with MATLAB and SimBiology, Giant Jamboree, Boston, USA <strong>(2018)</strong></li>
 				<li><a href="https://2018.igem.org/Giant_Jamboree">International Genetically Engineered Machines (iGEM) Giant Jamboree 2018</a>, Boston, USA <strong>(2018)</strong></li>
-				<li><a href="http://www.kvpy.iisc.ernet.in/vijyoshi2018/">Vijyoshi: National Science Camp</a>, organized by IISc-Bangalore at IISER-Kolkata, India <strong>(2017)</strong></li>
+				<li><a href="https://vijyoshi.iiserkol.ac.in/vijyoshi2017/">Vijyoshi: National Science Camp</a>, organized by IISc-Bangalore at IISER-Kolkata, India <strong>(2017)</strong></li>
 			  </ul>
 			</div>
 		</div>
