@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+	<title>Dumb Vada Pav</title>
+	<link rel="icon" type="image/x-icon" href="assets/img/icon.png">
+
+	<script src="https://kit.fontawesome.com/79421e0108.js" crossorigin="anonymous"></script>
+
+	<!-- Custom CSS for code blocks -->
+	<style>
+		body p {
+			font-family: "Lato";
+			font-size: 17px;
+		}
+
+		pre {
+			border: none;
+			padding: 0;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.codeblock pre {
+			background-color: #f8f8f8;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			font-size: 16px;
+			line-height: 1.5;
+			overflow: auto;
+			padding: 10px;
+		}
+		.codeblock pre code {
+			color: #333;
+			font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+			font-size: 16px;
+			white-space: pre-wrap;
+			word-break: break-all;
+			tab-size: 4;
+		}
+
+		.highlight {
+			background-color: #f8f8f8;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding: 3px;
+			color: #333;
+		}
+
+		.softhighlight {
+			background-color: #f8f8f8;
+			padding: 3px;
+/*			color: #333;*/
+		}
+
+		.indexitem li {
+			font-size: 18px;
+		}
+
+		.super-title h1 {
+			font-family: "Roboto Slab";
+			font-size: 40px;
+			font-weight: bold;
+			margin-bottom: 5%;
+			padding-bottom: 20px;
+			position: relative;
+			color: #404040;
+		}
+
+		.super-title h1::before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 120px;
+			height: 1px;
+			background: #ddd;
+			bottom: 1px;
+			left: calc(50% - 60px);
+		}
+
+		.super-title h1::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 3px;
+			background: #0563bb;
+			bottom: 0;
+			left: calc(50% - 20px);
+		}
+
+		.section-title h2 {
+			font-family: "Roboto Slab", sans-serif;
+			font-size: 30px;
+			font-weight: bold;
+			margin-bottom: 1%;
+			padding-bottom: 10px;
+			position: relative;
+			color: #404040;
+		}
+
+		.section-title h2 i {
+			font-size: 28px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container mt-5">
+
+		<div class="row">
+			<div class="col">
+				<div class="super-title"><h1 class="text-center">How to do that in Python?</h1></div>
+				<p style="font-size: 20px;">A collection of code snippets to make my (and yours too!) python life a little easier. Click on the task in the list below to jump to that section.</p>
+				<ul class="indexitem">
+					<li><a href="#ipythonstartup">Automatically import packages in ipython</a></li>
+					<li><a href="#customplotlib">Modify the default matplotlib style using stylesheet</a></li>
+					<li><a href="#colormapcycler">Create color cycler from colormap</a></li>
+					<li><a href="#colorbarplot">Plotting inside a colorbar</a></li>
+				</ul>
+				<hr>
+			</div>
+		</div>
+
+<!-- ------------------------------------ -->
+		<div class="row" id="ipythonstartup">
+			<div class="col">
+				<div class="section-title"><h2><i class="fab fa-python"></i> Automatically import packages in <code class="softhighlight">ipython</code></h2></div>
+
+				<p>In theory, you can run any number of python scripts every time you startup an ipython instance. This is most useful to automatically import commonly used packages such as <code class="softhighlight">numpy</code> and <code class="softhighlight">matplotlib</code>. I also use it to set a <a href="#customplotlib">custom matplotlib style</a> while using ipython. Let's say we wish to run <code class="softhighlight">myscript.py</code> (an example below) every time we start ipython.</p> 
+
+				<div class="codeblock">
+					<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('my_matplotlib.mplstyle')
+plt.ion()</code></pre>
+				</div>
+				
+				<p>We simply copy this script to the location <code class="highlight">~/.ipython/profile_default/startup/myscript.py</code> and voila!</p> 
+			</div>
+		</div>
+		<hr>
+<!-- ------------------------------------ -->
+
+<!-- ------------------------------------ -->
+		<div class="row" id="customplotlib">
+			<div class="col">
+				<div class="section-title"><h2><i class="fab fa-python"></i> Modify the default matplotlib style using stylesheet</h2></div>
+
+				<p>The default <code class="softhighlight">matplotlib</code> style is an embarrassingly ugly plotting style and using it is a sure-fire way to let everyone know that you are a <code class="softhighlight">matplotlib</code> noob. While there are numerous packages to make it look prettier (my favorite being <a href="https://seaborn.pydata.org/">seaborn</a>), you can very easily create your own style! <code class="softhighlight">matplotlib</code> provides an amazing level of plot customizability from tick sizes to frame color and from point markers to legend styles.</p>
+
+				<p>The first step is to create a file <code class="highlight">my_matplotlib.mplstyle</code> using the list of customizable keywords found <a href="https://matplotlib.org/stable/tutorials/introductory/customizing.html#the-default-matplotlibrc-file">here</a> (you don't have to use them all!). Following is my default <code class="softhighlight">matplotlib</code> style, inspired by <a href="https://peterboorman.com/plots.html">Peter Boorman</a>. </p>
+
+				<div class="codeblock">
+					<pre><code>#frame width
+axes.linewidth: 2
+
+#ticks in or out
+xtick.direction: in
+ytick.direction: in
+
+#top and right ticks
+xtick.top: True
+ytick.right: True
+
+#major ticks
+xtick.major.size: 6
+xtick.major.width: 2
+ytick.major.size: 6
+ytick.major.width: 2
+
+#minor ticks
+xtick.minor.size: 4
+xtick.minor.width: 1.5
+ytick.minor.size: 4
+ytick.minor.width: 1.5
+
+#tick size
+xtick.labelsize: large
+ytick.labelsize: large
+
+#axes label
+axes.labelsize: x-large
+axes.labelweight: heavy
+
+#title
+axes.titlesize: xx-large
+axes.titleweight: heavy
+
+#legend
+legend.fontsize: large
+legend.title_fontsize: x-large
+
+#lines
+lines.linewidth: 2
+
+#colors
+axes.prop_cycle: cycler('color', ['66c2a5', 'fc8d62', '8da0cb', 'e78ac3', 'a6d854', 'ffd92f', 'e5c494', 'b3b3b3']) #currently using default 'Set2' from plt.cm.Set2.colors</code></pre>
+				</div>
+
+				<p>You are now ready to use this style by simply adding the line <code class="highlight">plt.style.use('my_matplotlib.mplstyle')</code> in your python programs. Alternatively, you can set this to be a default style in ipython using <a href="#ipythonstartup">startup scripts</a>.</p>
+			</div>
+		</div>
+		<hr>
+<!-- ------------------------------------ -->
+
+<!-- ------------------------------------ -->
+		<div class="row" id="colormapcycler">
+			<div class="col">
+				<div class="section-title"><h2><i class="fab fa-python"></i> Create color cycler from a colormap</h2></div>
+
+				<p>Sometimes you need all the curves in your plot to have different shades of the same color, or maybe you need them to follow the colors from a colormap instead of the default blue, orange, green, ... order. You can do so using "color cycler". A "color cycler" is an object that <code class="softhighlight">matplotlib</code> uses to assign a color to a new plot element.</p>
+
+				<div class="codeblock">
+					<pre><code>plt.rcParams["axes.prop_cycle"] = plt.cycler("color", plt.cm.plasma(np.linspace(0, 1, 10)))</code></pre>
+				</div>
+				<p>Here's the breakdown of the above code: <code class="softhighlight">plt.cycler</code> is a function that creates a cycler object for property <code class="softhighlight">color</code> using the list of 10 colors sampled from the <code class="softhighlight">plasma</code> colormap using <code class="softhighlight">plt.cm.plasma(np.linspace(0, 1, 10))</code>. You can also create complicated cycler objects using a combination of color and linestyles as described <a href="https://matplotlib.org/stable/tutorials/intermediate/color_cycle.html">here</a>.</p>
+			</div>
+		</div>
+		<hr>
+<!-- ------------------------------------ -->
+
+<!-- ------------------------------------ -->
+		<div class="row" id="colorbarplot">
+			<div class="col">
+				<div class="section-title"><h2><i class="fab fa-python"></i> Plotting inside a colorbar</h2></div>
+				<p>The colorbar object in python has it's own "AxesSubplot" instance that can be accessed using <code class="softhighlight">cb.ax</code> where <code class="softhighlight">cb</code> is a colorbar object created using <code>plt.colorbar()</code>. In other words, you can do everything with colorbars that you can do with subplots. For example, the following code will produce the image given below.</p>
+
+				<div class="codeblock">
+					<pre><code>cb.ax.set_ylabel('this is y label') #add axes labels
+cb.ax.scatter(0.5, 30, marker='x', color='r') #X-axis limits: 0 to 1; Y-axis limits: inferred from the figure
+cb.ax.text(0.1, 50, "some text", rotation=90, fontsize=14) #add text
+cb.ax.annotate("point", (0.5, 30), (1.1, 10), arrowprops={'arrowstyle': '-|>', 'connectionstyle': 'arc3,rad=0.3'}) #add annotations</code></pre>
+				</div>
+
+				<img src="assets/img/colorbarplot.png" style="width: 40%; display: block; margin-left: auto; margin-right: auto;" alt="A colorbar showing various additional elements">
+			</div>
+		</div>
+		<hr>
+<!-- ------------------------------------ -->
+
+	</div>
+</body>
+</html>
