@@ -1,0 +1,11 @@
+body {
+	background-color: black;
+	width: 800px;
+	color: white;
+	font-family: monospace;
+	font-size: 13px;
+}
+
+a {
+	color: darkturquoise;
+}
